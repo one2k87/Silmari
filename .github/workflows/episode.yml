@@ -1,0 +1,49 @@
+name: episode-review-audio
+on:
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: "episodes/ 아래 폴더 이름"
+        required: true
+      skip_optional:
+        description: "선택 구간(optional) 빼기"
+        type: boolean
+        default: false
+  push:
+    paths: ["episodes/*/build.request"]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - id: ep
+        env:
+          INPUT_EP: ${{ inputs.episode }}
+          INPUT_SKIP: ${{ inputs.skip_optional }}
+        run: |
+          EP="$INPUT_EP"
+          if [ -z "$EP" ]; then EP=$(git diff --name-only HEAD~1 HEAD -- 'episodes/*/build.request' | head -1 | cut -d/ -f2); fi
+          echo "dir=episodes/$EP" >> "$GITHUB_OUTPUT"
+          FLAG=""
+          if [ "$INPUT_SKIP" = "true" ] || grep -qs skip-optional "episodes/$EP/build.request"; then FLAG="--skip-optional"; fi
+          echo "flag=$FLAG" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v4
+        with:
+          path: .tts_cache
+          key: tts-${{ steps.ep.outputs.dir }}-${{ hashFiles(format('{0}/script.json', steps.ep.outputs.dir)) }}
+          restore-keys: tts-${{ steps.ep.outputs.dir }}-
+      - run: python3 tools/build_episode.py "${{ steps.ep.outputs.dir }}" ${{ steps.ep.outputs.flag }}
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_API_KEY_PAID: ${{ secrets.LLM_API_KEY_PAID }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: episode-audio
+          path: out/*.mp3
+          retention-days: 90

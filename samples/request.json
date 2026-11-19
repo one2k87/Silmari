@@ -1,0 +1,9 @@
+{
+  "note": "v1 2026-11-19 — narrator voice x direction intensity. Pushing a change to this file runs the samples workflow.",
+  "voices": ["Charon", "Gacrux", "Sulafat"],
+  "styles": [
+    {"id": "calm", "label": "절제(담담한 해설)", "prompt": "calm news explainer, steady pace, natural pauses"},
+    {"id": "docu", "label": "다큐(완급 강하게)", "prompt": "investigative documentary narrator, low and slow opening, deliberate pauses, slows down before key turns, restrained intensity"}
+  ],
+  "text": "11월 19일, 수능이 치러졌습니다. <long pause> 올해 시험장은 예년과 달랐습니다. 스마트기기는 종류를 가리지 않고 모두 내야 했고, 감독관이 안경을 확인하겠다고 하면 협조해야 했습니다. 시험 사흘 전, 국무총리가 관계부처를 모아 직접 지시한 내용입니다. 그런데 시작은 수능이 아니었습니다. <short pause> 한 자격시험의 수석 합격자였습니다. 뉴스 실마리. 오늘의 이야기는, 시험장에 들어온 AI입니다. 여기까지는 대비의 이야기였습니다. <long pause> 그리고 11월, 일은 다른 시험에서 터집니다. 올해 제63회 세무사 시험. 수석 합격자의 점수를 두고 의혹이 제기됐습니다."
+}

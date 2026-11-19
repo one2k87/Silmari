@@ -1,0 +1,28 @@
+name: voice-samples
+on:
+  workflow_dispatch:
+  push:
+    paths: ["samples/request.json"]
+jobs:
+  samples:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - uses: actions/cache@v4
+        with:
+          path: .tts_cache
+          key: tts-samples-${{ hashFiles('samples/request.json') }}
+          restore-keys: tts-samples-
+      - run: python3 tools/make_samples.py samples/request.json
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_API_KEY_PAID: ${{ secrets.LLM_API_KEY_PAID }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: voice-samples
+          path: out/samples/*.mp3
+          retention-days: 90
