@@ -1,0 +1,260 @@
+{
+ "id": "2026-11-world-brief",
+ "title": "선전에 모인 미국·중국·러시아, 이번 주 나라 밖 소식",
+ "as_of": "2026-11-19",
+ "voices": {
+  "N": "Charon",
+  "T": "Sulafat"
+ },
+ "narrator_style": "investigative documentary narrator, low and slow opening, deliberate pauses, slows down before key turns, restrained intensity",
+ "sources": {
+  "S1": {
+   "kind": "public",
+   "name": "청와대 국가안보실장 브리핑(2026-11-12) 아세안·APEC 순방 일정과 목표",
+   "url": "https://www.korea.kr/briefing/presidentView.do?newsId=148975591"
+  },
+  "S2": {
+   "kind": "public",
+   "name": "정책브리핑(2026-11-12) 이 대통령, 아세안·APEC 정상회의 참석",
+   "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148975598"
+  },
+  "P1": {
+   "kind": "press",
+   "name": "머니S(2026-11-19) 미·중·러 정상 첫 3자 회동",
+   "url": "https://www.sidae.com/article/2026111913300615034"
+  },
+  "P2": {
+   "kind": "press",
+   "name": "VOA 한국어(2026-11-19) 미중 정상회담",
+   "url": "https://www.voakorea.com/a/8225441.html"
+  },
+  "P3": {
+   "kind": "press",
+   "name": "머니투데이(2026-11-19) 3자 회담 의제와 공동성명 전망",
+   "url": "https://supple.kr/news/cmwmps4s1s8v3tevd1stpsyud"
+  },
+  "P4": {
+   "kind": "press",
+   "name": "한국뉴스(2026-11-19) AP 인용 — 유럽 '의지의 연합' 회의",
+   "url": "https://www.24news.kr/news/articleView.html?idxno=313304"
+  }
+ },
+ "sections": [
+  {
+   "id": "s00",
+   "act": 0,
+   "style": "calm, neutral, plain announcement",
+   "lines": [
+    {
+     "sp": "N",
+     "text": "이 방송은 AI 음성으로 제작했습니다. 2026년 11월 19일 오후까지 공개된 자료를 바탕으로 합니다.",
+     "src": []
+    }
+   ],
+   "bundle_skip": true
+  },
+  {
+   "id": "s01",
+   "act": 0,
+   "style": "documentary narrator, low and slow, deliberate pauses",
+   "lines": [
+    {
+     "sp": "N",
+     "text": "11월 19일, 중국 선전. <long pause> 미국과 중국, 러시아의 정상이 한 방에 앉았습니다. 세 나라 정상만 따로 만난 것은 처음이라고 여러 언론이 전했습니다.",
+     "src": [
+      "P1",
+      "P3"
+     ]
+    },
+    {
+     "sp": "N",
+     "text": "뉴스 실마리. 오늘의 이야기는, 이번 주 나라 밖 소식입니다. 짧게 정리합니다.",
+     "src": []
+    }
+   ]
+  },
+  {
+   "id": "s02",
+   "act": 1,
+   "style": "clear and steady, slightly faster",
+   "lines": [
+    {
+     "sp": "N",
+     "text": "먼저 무슨 자리였는지부터. 아시아와 태평양 주변 나라들이 해마다 모이는 회의가 있습니다. 에이펙입니다. 올해는 18일과 19일, 중국 선전에서 열렸습니다.",
+     "src": [
+      "S2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s02t",
+   "act": 1,
+   "style": "friendly explainer, clear and a little brighter",
+   "lines": [
+    {
+     "sp": "T",
+     "text": "에이펙. 아시아태평양경제협력체를 줄인 말입니다. 원래는 무역과 경제 협력을 이야기하는 모임입니다. 그런데 정상들이 한곳에 모이다 보니, 회의장 바깥에서 따로 만나는 자리가 더 큰 뉴스가 되곤 합니다. 이번이 그랬습니다.",
+     "src": []
+    }
+   ],
+   "term": "APEC"
+  },
+  {
+   "id": "s03",
+   "act": 2,
+   "style": "investigative documentary, grave and measured",
+   "lines": [
+    {
+     "sp": "N",
+     "text": "첫 번째 실마리. 세 정상은 무엇을 이야기했을까요.",
+     "src": []
+    },
+    {
+     "sp": "N",
+     "text": "보도에 따르면 의제는 핵무기를 줄이는 문제, 이란에서 벌어지고 있는 전쟁, 그리고 우크라이나 전쟁이었습니다.",
+     "src": [
+      "P1",
+      "P3"
+     ]
+    },
+    {
+     "sp": "N",
+     "text": "3자 회동에 앞서 미국과 중국 정상은 따로 만났습니다. 미국 대통령은 우크라이나 전쟁을 끝내는 데 중국과 함께 돕고 싶다고 말한 것으로 전해졌습니다.",
+     "src": [
+      "P1",
+      "P2"
+     ]
+    },
+    {
+     "sp": "N",
+     "text": "무엇을 합의했는지는, 이 방송을 만드는 시점에 확인하지 못했습니다. 공동성명이 나올지도 회담 전부터 불투명하다는 보도가 있었습니다.",
+     "src": [
+      "P3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s04",
+   "act": 3,
+   "style": "even-handed, analytical, neutral tone",
+   "lines": [
+    {
+     "sp": "N",
+     "text": "두 번째 실마리. 같은 일, 다른 시각입니다.",
+     "src": []
+    },
+    {
+     "sp": "N",
+     "text": "이 만남을 두고 '제2의 얄타 회담'이라는 말이 나왔습니다.",
+     "src": [
+      "P1"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s04t",
+   "act": 3,
+   "style": "friendly explainer, clear and a little brighter",
+   "lines": [
+    {
+     "sp": "T",
+     "text": "얄타 회담. 1945년, 2차 세계대전이 끝나갈 무렵 미국과 영국, 소련의 정상이 모여 전쟁 뒤의 세계를 어떻게 나눌지 정한 회의입니다. 그래서 지금 이 말은, 큰 나라 몇이 모여 다른 나라의 운명을 당사자 없이 정한다는 걱정을 담아 쓰입니다.",
+     "src": []
+    }
+   ],
+   "term": "얄타 회담"
+  },
+  {
+   "id": "s05",
+   "act": 3,
+   "style": "even-handed, analytical, neutral tone",
+   "lines": [
+    {
+     "sp": "N",
+     "text": "실제로 우크라이나는 이 자리에 없었습니다.",
+     "src": [
+      "P1"
+     ]
+    },
+    {
+     "sp": "N",
+     "text": "같은 날 독일 베를린에서는 우크라이나를 돕는 나라들이 따로 모였다고 보도됐습니다. 유럽은 우크라이나가 참여해야 하고 전쟁 뒤의 안전이 보장돼야 한다는 점을 강조했습니다.",
+     "src": [
+      "P4"
+     ]
+    },
+    {
+     "sp": "N",
+     "text": "큰 나라들이 마주 앉아야 전쟁이 끝난다는 시각과, 당사자가 빠진 합의는 안 된다는 시각. 이 방송은 어느 쪽이 맞다고 판단하지 않습니다.",
+     "src": []
+    }
+   ]
+  },
+  {
+   "id": "s06",
+   "act": 4,
+   "style": "clear and steady, practical",
+   "lines": [
+    {
+     "sp": "N",
+     "text": "마지막 실마리. 그래서 우리와는 무슨 상관일까요.",
+     "src": []
+    },
+    {
+     "sp": "N",
+     "text": "우리 대통령도 이 회의에 있었습니다. 16일부터 19일까지 필리핀과 중국을 차례로 찾았습니다.",
+     "src": [
+      "S1",
+      "S2"
+     ]
+    },
+    {
+     "sp": "N",
+     "text": "청와대가 미리 밝힌 목표 가운데 하나는, 남북 대화와 북미 대화가 다시 열리도록 주변 나라들의 지지를 얻는 것이었습니다.",
+     "src": [
+      "S1"
+     ]
+    },
+    {
+     "sp": "N",
+     "text": "관심을 모았던 북미 정상의 만남은 이뤄지지 않았습니다. 북한 지도자는 선전에 오지 않았다고 보도됐습니다.",
+     "src": [
+      "P1"
+     ]
+    },
+    {
+     "sp": "N",
+     "text": "아직 모르는 것. 세 정상이 무엇에 합의했는지, 미국과 러시아 정상이 따로 만날지, 그리고 이 흐름이 한반도 문제로 이어질지입니다.",
+     "src": [
+      "P1"
+     ]
+    },
+    {
+     "sp": "N",
+     "text": "이 방송은 결과를 예측하지 않습니다. 공식 발표가 나오면 다음 묶음 첫머리에서 전하겠습니다.",
+     "src": []
+    }
+   ]
+  },
+  {
+   "id": "s07",
+   "act": 4,
+   "style": "warm recap, slower, gentle close",
+   "lines": [
+    {
+     "sp": "T",
+     "text": "오늘의 용어, 두 가지만 다시. 에이펙, 아시아와 태평양 나라들의 경제 협력 모임. 얄타 회담, 큰 나라끼리 세계의 일을 정했던 1945년의 회의.",
+     "src": []
+    },
+    {
+     "sp": "N",
+     "text": "다음에 볼 것은, 선전에서 나올 발표입니다. <short pause> 뉴스 실마리였습니다.",
+     "src": []
+    }
+   ]
+  }
+ ]
+}
