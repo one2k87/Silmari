@@ -34,8 +34,10 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: .tts_cache
-          key: tts-${{ steps.ep.outputs.dir }}-${{ hashFiles(format('{0}/script.json', steps.ep.outputs.dir)) }}
-          restore-keys: tts-${{ steps.ep.outputs.dir }}-
+          key: ttsall-${{ github.run_id }}
+          restore-keys: |
+            ttsall-
+            tts-episodes/
       - run: python3 tools/build_episode.py "${{ steps.ep.outputs.dir }}" ${{ steps.ep.outputs.flag }}
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}

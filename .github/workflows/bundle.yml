@@ -1,0 +1,33 @@
+name: bundle-review-audio
+on:
+  push:
+    paths: ["bundles/*/build.request"]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - id: b
+        run: echo "dir=bundles/$(git diff --name-only HEAD~1 HEAD -- 'bundles/*/build.request' | head -1 | cut -d/ -f2)" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v4
+        with:
+          path: .tts_cache
+          key: ttsall-${{ github.run_id }}
+          restore-keys: |
+            ttsall-
+            tts-episodes/
+      - run: python3 tools/build_bundle.py "${{ steps.b.outputs.dir }}"
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_API_KEY_PAID: ${{ secrets.LLM_API_KEY_PAID }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bundle-audio
+          path: out/*.mp3
+          retention-days: 90

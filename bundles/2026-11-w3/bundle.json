@@ -1,0 +1,11 @@
+{
+  "id": "2026-11-w3",
+  "title": "뉴스 실마리 통근 묶음 — 11월 셋째 주",
+  "voice": "Charon",
+  "style": "investigative documentary narrator, low and slow, deliberate pauses, restrained intensity",
+  "opening": "이 방송은 AI 음성으로 제작했습니다. <short pause> 뉴스 실마리, 통근 묶음입니다. 오늘은 세 가지 이야기를 차례로 풀어 봅니다.",
+  "episodes": [
+    {"id": "2026-11-ai-exam", "bridge": "첫 번째 이야기입니다."}
+  ],
+  "closing": "오늘의 세 가지 이야기는 여기까지입니다. 새 소식이 나오면 다음 묶음 첫머리에서 이어 가겠습니다. <short pause> 뉴스 실마리였습니다."
+}
