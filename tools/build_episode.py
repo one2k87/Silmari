@@ -18,7 +18,7 @@ for sec in ep["sections"]:
     for line in sec["lines"] + [{"sp": None, "text": ""}]:
         if line["sp"] != speaker and chunk:
             text = " ".join(chunk)
-            style = TERM_STYLE if speaker == "T" else sec["style"]
+            style = TERM_STYLE if speaker == "T" else f"{ep['narrator_style']}; this part: {sec['style']}"
             wav, hit, _ = tts.synth(text, ep["voices"][speaker], style)
             wavs.append(wav)
             cached += hit
