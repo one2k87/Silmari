@@ -14,6 +14,9 @@ facts = [(s, l) for s, l in lines if l["src"]]
 
 def bucket(keys):
     kinds = {src[k]["kind"] for k in keys}
+    if kinds == {"calc"}:
+        return "계산"
+    kinds.discard("calc")
     if kinds == {"public"}:
         return "공공"
     if "public" in kinds:
@@ -32,9 +35,9 @@ out = [f"# 검수표 — {ep['title']}", "",
 for s, l in facts:
     if re.search(r"\d|다섯|여덟|네 명|사흘|한 시간", l["text"]):
         out.append(f"| {s['id']} | {clean(l['text'])} | {', '.join(l['src'])} |")
-out += ["", "## 언론 보도에만 기대는 문장", "", "| 구간 | 문장 | 근거 |", "|---|---|---|"]
+out += ["", "## 언론 보도·자체 계산에만 기대는 문장", "", "| 구간 | 문장 | 근거 |", "|---|---|---|"]
 for s, l in facts:
-    if bucket(l["src"]) in ("언론", "일반 지식"):
+    if bucket(l["src"]) in ("언론", "일반 지식", "계산"):
         out.append(f"| {s['id']}{' (선택)' if s.get('optional') else ''} | {clean(l['text'])} | {', '.join(l['src'])} |")
 out += ["", "## 출처", ""]
 out += [f"- **{k}** [{v['kind']}] {v['name']}" + (f" — {v['url']}" if v["url"] else "") for k, v in src.items()]

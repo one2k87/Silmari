@@ -4,8 +4,7 @@ import re
 import sys
 from pathlib import Path
 
-ACTS = {0: "여는 말", 1: "1막 — 내 시험에서 달라지는 것", 2: "2막 — 여기까지 온 과정",
-        3: "3막 — 같은 일, 다른 시각", 4: "4막 — 무엇을 보면 되나"}
+ACTS = {0: "여는 말", 1: "1막 — 먼저, 나에게 달라지는 것", 2: "2막 — 여기까지 온 과정", 3: "3막 — 같은 일, 다른 시각", 4: "4막 — 무엇을 보면 되나"}
 ep_dir = Path(sys.argv[1])
 d = json.loads((ep_dir / "script.json").read_text(encoding="utf-8"))
 out = [f"# {d['title']}", "",
